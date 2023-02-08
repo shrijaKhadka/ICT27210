@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+@Model IEnumerable<GP_ICT272.Models.Events>
+    <h2> Event Description</h2>
+    <table border="1">
+        <tr>
+            <td>Title</td>
+            <td>Description</td>
+        </tr>
+        @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.EventDescription</td>
+                </tr>
+            }
+    </table>
+
+
